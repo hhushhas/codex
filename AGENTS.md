@@ -18,6 +18,14 @@
 - Stage only intended paths with `git add -p`; never `git add .`.
 - No stash/reset/revert of others' work; no repo-wide formatting/renames/refactors unless asked.
 
+## Codex Home Git Safety
+
+- `/Users/macmini/.codex` is intentionally an `AGENTS.md`-only Git repo.
+- Do not commit sessions, archived sessions, SQLite databases, WAL/SHM files, logs, generated images, shell snapshots, auth files, config files, plugin caches, temporary files, or token ledgers from `/Users/macmini/.codex`.
+- Do not push `/Users/macmini/.codex/config.toml` or `/Users/macmini/.codex/auth.json`; they may contain credentials.
+- Keep `/Users/macmini/.codex/.git/info/exclude` denying all files except explicitly approved guidance files.
+- Changing the `/Users/macmini/.codex` remote allowlist requires explicit approval in the active thread.
+
 ## Research
 
 - Search early, quote exact errors, prefer 2026–2024 sources when recency matters; use Context7 for official docs/API setup and web search for news, issues, forums, pricing, incidents, comparisons, and fallback research.
